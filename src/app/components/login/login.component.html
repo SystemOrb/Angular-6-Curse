@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-md-12 text-center">
+    <button
+    *ngIf="socialLogin.user.logged"
+    (click)="AuthLogout()"
+    style="float:right"
+    class="btn btn-danger text-left"
+    type="button">
+    Cerrar sesión
+  </button>
+    <h3>
+      Iniciar sesión con las redes
+    </h3>
+
+    <button
+    style="background-color:red;color:white;border:1px solid red"
+    type="button"
+    (click)="AuthLogin('Google')"
+    class="btn btn-primary"
+    name="button">
+      Google
+    </button>
+    <button type="button"
+    (click)="AuthLogin('Google')"
+    style="margin-left:1.2em"
+    class="btn btn-outline-primary"
+    name="button">
+      Twitter
+    </button>
+  </div>
+</div>

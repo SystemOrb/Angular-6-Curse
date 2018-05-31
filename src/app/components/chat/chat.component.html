@@ -1,0 +1,33 @@
+<div id="fireChat"  class="col-sm-3 col-sm-offset-4 frame">
+    <ul>
+      <li *ngFor="let chat of _chat.chatMessage" style="width:100%">
+              <div class="msj macro">
+                  <div class="avatar">
+                    <img class="img-circle" style="width:100%;"
+                    [src]="chat.photo" /></div>
+                      <div class="text text-l">
+                        <span class="badge badge-primary">Carlos</span>
+                        <br>
+                              <p> {{ chat.message }} </p>
+                              <p><small> {{chat.date | date}} </small></p>
+                          </div>
+                      </div>
+        </li>
+    </ul>
+    <div>
+        <div class="msj-rta macro">
+            <div class="text text-r" style="background:whitesmoke !important">
+                <input
+                 name="message_box"
+                 [(ngModel)]="sendMessage"
+                 class="mytext form-control"
+                 (keyup.enter)="senderMessage()"
+                placeholder="Coloca un mensaje"/>
+            </div>
+
+        </div>
+        <div style="padding:10px;">
+            <span class="glyphicon glyphicon-share-alt"></span>
+        </div>
+    </div>
+</div>
